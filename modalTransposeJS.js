@@ -13,9 +13,11 @@ function handleEditorReady(event) {
 };
 
 // replaces "score1" DOM element with a Noteflight embedded document
-function selectFirstTwo(event) {
-  scoreView.selectMeasures(0,2);
-};
+// Create an event handler that selects the first two measures of a score
+function selectOnLoad(evt) {
+  score1.selectMeasures(0, 2);
+}
+
 
 var options = {
   width: 800,
@@ -30,5 +32,5 @@ var options = {
 var scoreView = new NFClient.ScoreView(score1, '0afa81734dcfcf992d7e3dad085a187e93c5ae88', options);
 scoreView.addEventListener('editorReady', handleEditorReady);   // wait for ready event
 
-scoreView.addEventListener('scoreDataLoaded', selectFirstTwo);
-//scoreView.transpose({semitones: 5}); // transpose up two semitones
+// After the score loads up, select its first two measures.
+score1.addEventListener('scoreDataLoaded', selectOnLoad);
