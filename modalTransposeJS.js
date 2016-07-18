@@ -35,3 +35,5 @@ var score1 = new NFClient.ScoreView('score1', 'fcfd6d0bc0770f67cdbe1b8129456521f
 score1.getScore().done(function(scoreData)) {
   console.log(scoreData);
 }
+
+console.log("Hello github");
