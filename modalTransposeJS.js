@@ -15,7 +15,7 @@ function handleEditorReady(event) {
 // replaces "score1" DOM element with a Noteflight embedded document
 function selectFirstTwo(event) {
   scoreView.selectMeasures(0,2);
-}
+};
 
 var options = {
   width: 800,
